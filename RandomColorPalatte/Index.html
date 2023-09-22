@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Pallate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+<h1 class="head" id="head">Color Palatte</h1>
+<button id="btn" class="refresh">Refresh</button>
+</div>
+<div class="main">
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+</div>
+
+    </div>
+    <script>
+let box=document.querySelectorAll(".box");
+let head=document.getElementById("head");
+let btn=document.getElementById("btn");
+let ref = document.querySelector(".refresh");
+
+var i;
+for(i=0; i<box.length; i++){
+let colorCode= "#"+Math.random().toString(16).slice(2,8);
+box[i].innerHTML=colorCode;
+box[i].style.background=colorCode;
+head.style.color=colorCode;
+
+
+};
+
+btn.addEventListener("click",()=>{
+window.location.reload()
+
+});
+// box.addEventListener("click",()=>{
+//     this.navigator.clipboard.writeText(this.innerHTML);
+// });
+
+
+box.forEach(function(x){
+x.addEventListener("click",()=>{
+    navigator.clipboard.writeText(x.innerHTML);
+    var currentColor = x.innerHTML;
+    x.innerHTML = "COPPIED";
+    var currentTag = x;
+  setTimeout (function(){
+
+x.innerHTML = currentColor;
+
+
+
+  },1000);
+    
+});
+
+});
+
+ref.addEventListener("click",()=>{
+
+
+    window.location = location.href;
+})
+
+
+
+
+
+    </script>
+</body>
+</html>

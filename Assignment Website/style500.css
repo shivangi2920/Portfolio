@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px){
+@media screen and (max-width: 400px){
 
 
     *{margin: 0;
@@ -334,7 +334,7 @@
     
     
     }
-    .sec-main2 .main-container .pig-section .text-div h1{font-size: 2.5rem;}
+    .sec-main2 .main-container .pig-section .text-div h1{font-size: 1.5rem;}
     .sec-main2 .main-container .pig-section .text-div p{margin-top: 2rem;
         font-size: 3vmin;
     }

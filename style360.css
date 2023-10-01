@@ -51,7 +51,7 @@
         .main {
             width: 100%;
             position: fixed;
-            z-index: 5;
+            z-index: 10000;
             top: 30%;
             padding: 5%;
             left: 50%;
